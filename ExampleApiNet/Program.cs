@@ -49,7 +49,7 @@ namespace ExampleApiNet
             response.Cookies.Add(new Cookie("content", "Where is my cookie?"));
 
             string responseString = "Hello World!";
-            byte[] buffer = System.Text.Encoding.UTF8.GetBytes(responseString);
+            byte[] buffer = Encoding.UTF8.GetBytes(responseString);
             response.ContentLength64 = buffer.Length;
 
             System.IO.Stream output = response.OutputStream;
